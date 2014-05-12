@@ -1,0 +1,200 @@
+﻿Matrix0s V1.0 Charge List [FR] By Jerome KASPER
+All Rights Reserved. Copyright 2013/2014 Creative Commons Zero License
+
+
+Kernel Core :
+
+
+Général:
+
+-> Le Projet Matrix0s est un Projet à But Pédagogique & Educatif à composante Documentaire complète, Formateur pour les participants, réalisé à des fins de Recherche/Développement/Innovation Informatique Amateurs. 
+   (Non Découragement face à la Concurrence ou la Critique, Chacun fait son Chemin)
+-> Conception Elégante , Décentralisée, Optimisée et Sécurisée d'un Système d'Exploitation en Assembleur pour Architecture x86-64 avec un Noyau léger Monolithique selon un Modèle Multi-Processus / Multi-Processeurs / Multi-Utilisateurs.
+-> Conception proche du Matériel et de la Qualité de Service pour des Performances Accrues ainsi qu'une Expérience Utilisateur Maximum à travers des Concepts Innovants, un Support Matériel restreind mais Complet et une mise en Pratique 
+   du Concept de "Grille Répartie Auto-Ajustée".
+-> L'Augmentation Conséquente du volumes des Mémoires Principales ,de leur Vitesse d'Accès et la baisse de leur Prix peut laisser imaginer un Modèle d'"Adressage Partagé Continu Virtuel" au sein d'un Ensemble d'Unités Informatiques et
+   la mise au placard du concept de SWAP local. Non nécessité du Disque Dur envisageable (PXE?). Système de remplacement à Chaud du Kernel (replace/relink)
+-> Support de l'architecture matérielle AMD x86-64 APU "Integrée" & "Low-Cost" pour La démonstration de la Proof of Concept => Multiplicité et scalabilité d'un même type d'unité pour un support optimum , peu cher et au grand potentiel.
+-> Fonctionnement Auto-Ajusté au possible du Système dans son Ensemble et ses Sous-Ensembles, Modèles de Données Minimaux et Efficaces, Relations de Données pointées au possible sous couvert de Sécurité afin d'éviter les Empilements de 
+   Piles de Protocoles, la Répétitions inutile de Données et/ou leur Corruption 
+     => Efficacité des Données et Préservation de leur Intégrité, Réplication Fichier à des fins Sécuritaires.
+-> Algorithmes d'Ordonnancement à Effort Maximum Distribué : Virtualisation d'accès aux ressources, Distribution Asynchrone de la charge et Exécution Parallèle 'Pseudo Synchrone' de Processus "répartis". ( Benchmark "Context switching")
+-> Système à Approche intelligente dans la Durée : Améliorations/Organisation des flux,Répartition des accès de Données et de la charge de Calcul dans le temps sur l'ensemble du Système.
+
+Ordonnancement Distribué Auto Evalué "Au Mieux", Réputation de Ressource par Propagation de Confiance à Pair et Modèle d'Organisation :
+
+-> Auto évaluation et Estimation par le Système de son Efficacité via un système de Routines de Mesures Temporelles "Temps"/"Cycles" sur des Traitements Internes Routiniers, de procédures de requêtes régulières créant la "SpeedMap" 
+   (état/débit des liens internes/externes inter-ressources) et la "FillMap" (Type de mémoires, Etat de Remplissage, Débits Lecture/Ecriture) ainsi que les "System Stats" (Statistiques Système d'un Node/Cercle et évolution=>log).
+   La Synthèse de ces Données servira de Contraintes pour l'Ordonnancement au sein d'un Cercle ou sur un Node. Procédures d'Evaluation Itératives Récurrentes.
+-> Conception Décentralisée avec Répartition Intelligente de la Masse de Calcul et des Données via un Meta-Ordonnanceur (Server Maître à Jeton ou "Master Server") se basant sur les contraintes fournies par les Auto-Evalueurs des Nodes 
+   (travail local/distant à réaliser, ailleurs que sur le Node si intéressant). Sur un réseau Interne Ethernet Gigabit par exemple, ou une Connexion Internet de type ADSL ou Fibre Optique, il peut être intéressant de répartir
+   de manière paginée certains blocs "d'Instructions/Données" au niveau Réseau pour ajouter un certain degré de Parallélisme à l'Exécution Locale d'un Processus et donc améliorer sa Rapidité de Traitement. On aura donc des Unités ou 
+   "Nodes" (+/- Poste Informatique), que l'on regroupera par "Cercles de diffusion" (équivalent VPN) multiples ou non, donnant accès à un "Espace Mémoire Commun Virtualisé" ou "Mémoire partagée de Cercle" administrée par un 
+   "Master Server", "au plus performant" (équivalent "Cloud") au sein d'un Cercle. Le Tout sera Accessible en Complément des Ressources Locales .
+-> Les Ressources "Unité de Traitement", "Mémoire", "Fichier", "Dossier", "Arborescence", "Interface matérielle", "Interface logicielle", "Traitement", "Paramètres", "Bus", "Adresse", "Contexte", "Segment", "Annuaire",
+   "Utilisateur", "Node" et "Cercle" sont reliables (=>IDE) et hiérarchisées selon un Modèle de Données Relationnel (ToDraw). L'Ensemble des Données / Traitements / Concepts / Matériels et Flux de Données dans chaque Cercle seront 
+   organisés selon ce Modèle Relationnel. Lors de l'Installation/Boot, le Système devra procéder à la Création Initiale de "l'Arborescence Relationelle" du Node en Installation, ou "Carte Système". Ce Modèle Relationnel facilitera 
+   l'Evaluation Ultérieure des Ressources Locales du Node et de leurs Interdépendances/Pondération Voisines pour chaque Cercle.
+-> Meta-Ajustement de Réputation des Ressources par "Propagation de Confiance à Pair à Connaissance maximum N+X" (X>=2)  (Pas besoin d'aller voir trop loin,si chacun connait ses voisins c'est déjà pas mal :) ).  
+   Chaque "Concept Voisin" à portée N+X adressé dans "l'Espace Mémoire Partagé de Cercle", manipulé par le Système dans son Ensemble ou ses Sous-Ensembles, est potentiellement sujet à Défaut/Corruption/Faute/Ralentissement etc... . 
+   Le Coefficient de Réputation "Local" permet d'évaluer la "Qualité Relative" du Concept Virtualisé que l'on souhaite accéder de manière locale ou distante, selon un certain point. L'établissement du Maillage global et l'Attribution
+   des Coefficients de Pondération de manière Locale ou Générale aux Ressources devient donc un "petit" effort commun répété qui amènera à l'Etablisssement de l'Utilisation Optimum du Système dans son Ensemble dans la Durée.
+   Les 3 principes de l'Etablissement de la Propagation de Confiance pour les Ressources Locales/Distantes vont permettre le Calcul / l'Ajustement du "Maillage Pondéré et Réparti", suivant ce bloc d'instructions:
+		1 - Demande de Réputation d'une Ressource via les 3 chemins suivants:
+			-Requête directe du Coefficient de réputation local pour la Ressource.
+			-Requête via proxy confiant (chemin connu aléatoire) du Coefficient de réputation local pour la Ressource.
+			-Requête via proxy inconnu (chemin inconnu aléatoire) du Coefficient de réputation local pour la Ressource.
+		2 - Enregistrement des mesures retournés pour la (les) Ressource(s) pour chaque chemin (ajustement valeurs avec le délai d'externalisation).
+		3 - Evaluation-Synthèse / Mise à jour des coefficients / Détection des spoofs possibles . Renvoi Synthèse vers Master Server.
+		(Si nécessaire,un watchdog fera l'épuration des ressources "Mortes" ou "Insignifiantes" => Ressources dont le coefficient avoisine 0+ Kill des "Echos" et "Rebonds" excessifs)
+-> Ordonnancement Interne des Processus Coefficienté avec Attribution de Tickets d'Exécution. Exécution Locale ou Distante calculée selon l'estimation des SpeedMap/FillMap par l'Ordonnanceur (si intéressant ou estimé intéressant) sur 
+   le Node ou les Ressources Virtualisées du Cercle. Ordonnancement pour une éxécution "au plus Rapide" selon un effort "Distribué". Chaque Coeur CPU sera référencé comme une Ressource de traitement avec la pile associée que l'on 
+   "Essaiera" de remplir "au Plus". 
+
+
+Parallélisme Asynchrone Distribué, Exécution "Pseudo-synchrone" Parallèle et Accès Mémoire Sécurisé Virtualisé/Transposé :
+
+-> Système Parallèle Asynchrone Distribué: afin de ne saturer aucun Node dans une Majorité de Cas, on pourra Paralléliser selon la SpeedMap/FillMap l'Exécution de "Threads" de code sur les Ressources Locales (Multiples 
+   Processeurs) et celles du Cercle (autres Nodes si besoin) tout en créant des "Points de Ralliement Synchrone" dans l'éxécution du code, laissant temporairement cours aux interruptions ou à d'autres instructions sur un core CPU par
+   exemple, le temps d'attendre que "Tout soi Terminé et de Retour à la Base Appellante" ou "Relocalisé". Ces Points de Ralliement seront des retours "Groupés et Synchrones" donnant suite à l'éxécution de la suite du programme un fois
+   terminées l'Ensemble des Procédures lancées Parallèlement au préalable. Nécessité d'une certaine Resynchronisation Exécutive basé sur le Timer "Cercle" transposé en Local pour Rétablissement Contexte / Instructions / Données après 
+   une "Répartition" . Impression de Pseudo "Temps réel" Nécessaire pour rendre "Transparent" l'éxécution d'un processus et sa fluidité ; Possible grâce aux Fréquences élevées des Bus Modernes. 
+     =>Cet Algorithme devrait permettre d'éviter les Pics de Charge sur les Nodes en répartissant le 'Surplus de Charge' sur le(s) Cercle(s) de Diffusion d'appartenance si il se trouve "Surchargé" en Local.(Effet de Bord de "Congestion 
+     Globale"?). Chaque Node doit donc accepter un certain pourcentage de "Charge Externe" de Processus pour contribuer à l'Effort Global tout en privilégiant son propre Fonctionnement .
+     => Système Parallèle Réparti Multi-Coeurs/ Multi-Nodes.
+-> Système de Master Server Décentralisé via un Système d'Attribution de Jeton Temporaire Tournant au "Meilleur Node du Cercle" selon la Réputation Globale (meilleure "note") d'un Node dans le Cercle 
+   (Procédure de Vote du(des) Master Server dans un Cercle de Nodes selon la Comparaison pondérée des System Stats, puis pré-attribution des serveurs de "Secours Supplémentaires"(Y>=2) N+Y Selon résultats N-Y du Vote. Ces Serveurs de 
+   Secours seront en mode préventif "Starting Block"=> mini démon minimal + "Map système Cercle Minimale" chargés sur ces Serveurs de "Secours Supplémentaires" qui,en cas de faute du service principal, permettent d'assurer un minimum 
+   de Charge d'Ordonnancement du Cercle Directement et de Relayer le reste du Contexte Serveur si nécessaire pour maintenir la Continuité du Service jusqu'au prochain Vote de Nodes => Tolérance aux Fautes multipliée.
+-> Développement du Concept de "Pseudo-Synchronicité" au sein des Cercles. Afin de mieux se repérer/ gérer l'Aspect Asynchrone ou Réparti de certains Traitements, le(s) Master Servers diffuserons de manière assez régulière des requêtes
+   de Resynchronisation aux Nodes du Cercle (Diffusion du TimeStamp Master Server en cours aux Nodes de manière régulière, et si Delta il y a au niveau d'un Node, enregistrement de la valeur Delta ou réajustement de l'horloge système). 
+   Attribution d'un "Start Time Index" à chaque programme à son démarrage, référentiel à l'horloge Node/Cercle (synchronisable/référentiel à ntp?) . La Pseudo-synchronicité n'est pas un algorithme à garantie de résultat
+   mais les Bus récents sont très performants et les Fréquences élevées, les résultats devraient être probants :) . Aussi, une marge de Timeout pour les Timings de retour et une Vérification Succinte des Données devra aussi être 
+   envisagée pour assurer la qualité des transferts et la fluidité de l'Exécution Processus (Effet de Bord Potentiel) ("Relocalisation Processus?").
+-> Création d'un Système Sécurisé  d'Appel de Procédure Distante pour les Traitements Asynchrones Parallélisés par Cercle et le Passage de "Threads" comportant "Instructions+Données" jusqu'à un Buffer distant pour Traitement et 
+   Retour du Résultat au Node effectuant la requête de "Distribution". Contexte de "Prison Externe" + Registres Virtuels pour l'Exécution Locale d'un Segment "Distant". ( Relocalisation Proccessus?)
+-> Système Local Sécurisé de Transposition des Adresses et d'Accès aux Ressources Locales du "Node" et à la "Mémoire Partagée de Cercle" "Distante". Clef de Décryptage de Translation d'Adresses de  l'Espace "Mémoire partagé de Cercle" 
+   accessible depuis Master Server en cours ( Fourni au coup par coup selon le Besoin de manière Ephémère et "Invisible" ). Mise en "Buffer Local Sécurisé" des Adresses mémoires "Fréquemment Utilisées" (critère?) pour  éviter le 
+   "Recalcul" ou le "Décryptage" abusif des Adresses Mémoire utilisées de manière Régulière (+de performances), tout en les laissant "Invisibles" car cette table sera placée Aléatoirement en Mémoire Locale.Si segmentation il y a, à 
+   chaque utilisation d'un lien chainé, un Ticket de "Réorganisation" est attribué. Processus de Réorganisation=> remise en contiguité de 2 segments ( page(s) ) mémoire sur une Ressource. Réitération régulière de la réorganisation 
+     => Tendance à la contiguité efficace sur les Supports Mémoire => Accès Mémoire Améliorés de manière générale.
+-> Table Cryptée des Pointeurs Mémoire et Ressources Locale pour Vérification Sécurisée en Espace Kernel des Accès. Utilisation Récurrente des Sommes de Contrôle (CRC) / Vérifications Aléatoires/Systématiques des Segments Mémoire 
+   Critiques pour éviter Injections / Overflows / Fautes diverses... Tous les Processus d'Exécution/Transfert de données "Sensibles" seront systématiquement vérifiés 2 fois au Départ et à l'Arrivée et mis en Buffer ( quelques cycles 
+   Processeur à 3Ghz pour une bonne sécurité, c'est pas cher payé ^^) ; Une procédure de callback défaut s'appliquera systématiquement en cas d'erreur quelconque ou indéfinie sur les traitements, délais ou vérifications pour relancer 
+   le Traitement/Envoi/Vérification des Données Erronnées (mieux vaut être sûr =) ).
+-> Pour le mode "Global", on aura Z (Z>=2) "Global Master Servers" dont le but sera de référencer,d'Inter-Ordonnancer et fournir des Sous-Domaines Compétents et Efficaces à des Serveurs de Niveau 2 Géolocalisés (Sous-Cercles Globaux 
+   "adaptés") pour un temps de réponse optimisé. Le "Coefficient de Réputation Réseau" synthétisé par les "Global Master Servers" guidera l'Attribution/Création/Transfert du jeton/Vote des Nodes au sein des Cercles de diffusion 
+    géolocaux . (On as encore le temps xD )
+
+
+Système de Fichier:
+
+-> Interface D'Entrée(s) / Sortie(s) Multiple Input Multiple Output (RAID software avec accès Démultipliés?).
+-> Support du Montage de Systèmes de fichiers Courants
+-> Système de Fichiers Distribué Tolérant aux Fautes avec Réplication Distribuée (RepMin>=3) des Fichiers Importants et Utilisés. Attribution à chaque Fichier d'un Facteur de Redondance Proportionnel. 
+     => plus un fichier est Utile/Important , plus le facteur de redondance sera important et plus il sera répliqué dans le système de fichiers distribué ( =>intrinsèquement sur plus de Nodes du Cercle ou plus de fois sur un Support à 
+     des endroits différents) de manière locale multiple. Plus de récurrence = plus d'assurance de ne pas perdre un fichier, un accès local multiple ,donc plus rapide, des données "pertinentes" et une tolérance aux pertes de 
+     données accrue.  Modèle (/SAV1 , /SAV2, /SAV3, etc...)
+-> Attribution d'un "Système de Fichiers Public" dédié au à la Récurrence/Transfert de données "Globales" (Cloud) sur les Espaces Mémoire Locaux des Nodes, propres à chaque Cercle dont le Node fait partie.
+   Données Globales Cryptées Illisibles "telles quel" sur un Node Local sans Clefs de Chiffrement du Master Server du Cercle. Séparation Locale des données "Globales" / "Cercle(s)" / "Système".
+
+
+
+Gestion Utilisateur:
+
+-> Système d'Annuaire Distribué et Partagé sur le Cercle par le Master Server en cours, Crypté publiquement de la même manière que la Table de Transposition d'Adresses de Ressources Réseau d'un Cercle, contenant les Autorisations
+   relatives aux divers Profils Utilisateurs pour les différentes Ressources du Cercle (système de "Liste Blanche"). Copie des Autorisations Utilisateur Globales en Mémoire Locale Protégée du Node lors de la Connexion. 
+   Création des Profils/Autorisations Utilisateurs Standards sur un Cercle (Profils Utilisateur) lors de la Création/ Mise à Jour d'un Cercle . Dérivation possible du Profil Utilisateur d'un Cercle à un Autre avec Attribution de Droits 
+   Standards + Extension / Troncature selon le Profil de Droits attribué lors de l'Inscription à un Cercle.
+
+
+Améliorations Mathématiques:
+
+-> Précalcul et Chargement de Tables d'Approximations pour Formules et Nombres Mathématiques Complexes en Espace Kernel (Trigonométrie, Exponentielle, Intégrale etc...) pour induire une rapidité substantielle lors des calculs 
+   mathématiques basiques de routine sur les Nombres Transcendants / Grands et Petits Nombres selon la précision nécessaire.
+-> nRNG hybride basé sur les décimales non séquentielles de PI calculées via formule BBP (réécriture "Bellard" ou "Viktor Adamchick/Stan Wagon") combiné aux sources d'entropie système internes et une adapation du PRNG de la libc.
+-> Gestion native de la Compression / Cryptage pour les flux de données/fichiers.
+
+
+
+
+
+Standards Techniques à implémenter:
+
+-> Support Complet 64 bits (mode long) . Autres Modes (mode Compatibilité/réel/protégé) Dépréciés. 
+-> Auto-Evaluation: Démon Timer Ultraprécis pour fonctions de Debug (+Dumper de Registres) et Evaluation des Bus de Données en Nombre de Cycles et en TimeStamps sur une Requête Standard "Lecture/Ecriture" par exemple. Algorithme de 
+   Synthèse de Ressources par "Etablissement de Carte de Pondération Relative".
+-> Sécurité : Système Local de Pointage Complémentaire Crypté et Vérifié (Table Pointeurs/Translation d'Adresses en Kernel+Copie+Clef privée distribuée par Master Server dispersée et placée aléatoirement en mémoire pour double 
+   vérification obligatoire lors des demandes d'accès mémoire). Gestion des Sommes de Contrôle CRC, Vérifications Aléatoires/Systématiques de Pages Mémoire, RNG hybride, Système d'Adressage "Universel" 64bits par Node et 128bits 
+   par Mémoire Partagée de Cercle . Segmentation Paginée Chaînée des Données avec Vérification des Chaînages par Correspondance de Table. Transposition des Droits Utilisateurs "en Cascade Locale" depuis un "Master Server". Buffering 
+   Sécurisé "Invisible" des Eléments récurrents (Adresses,Tableaux,Fonctions etc..) en Mémoire Locale. Chiffrement AES+RSA. Sommes de Contrôles insérées systématiquement en entête Fichier. "Oubli" des Données Sensibles.
+-> Réseau : Moteur Réseau Distribué Auto-Ajusté basé sur requêtes UDP (performances++). Implémentation Ethernet, 802.11, (TCP?), IPV4, IPV6 , UDP , ICMP , ARP, NTP, DNS, DHCP, HTTP.
+-> Matériel : Support natif architecture x86-64 AMD64, PCI, PCI-E, AHCI (SATA), PS/2, USB, ACPI, Modes VESA, NICs standards Intel/Realtek, Graphic APU AMD, Interface driver "Standard"? (RegisterMap, DataFormats, Methods).
+-> Transcodage : Support Unicode 5.0 (UTF-8/UTF-16)
+-> Système de Montage de Système de Fichiers pour gérer les Standards sur supports "Externes" (Support systèmes de fichiers locaux FAT32,NTFS,ext2,ext3)
+-> Système de Fichier spécifique Subdivisible MatrixOs optionellement Distribué à Fonctions "Réseau Distribué" et/ou "Auto" et/ou "Système".
+-> Système de Branchement par Référentiel Global Translaté (Adresse d'une "Ressource Cercle" Décodable via une clef éphémère transmise par le Master Server du Cercle)
+-> Communication InterProcessus Par Transmission de Contexte/Paramètres soumise à Vérifications de Sécurité (Contexte "Prison" externe).
+-> Modes Réseau "Global", "Undistributed" ou "Private" => Liste de Nodes groupé selon un Ring-ID en "Private", loopback en "Undistributed" et fourniture de 2 Adresses de "Global Master Servers" en "Global",selon le périmètre de 
+   connectivité désiré. Chaque Node peux potentiellement devenir Master Server en cas de "Réorganisation" du Cercle (suite à un changement induisant un résultat de Vote de Nodes différent).En mode "Undistributed" tout est géré 
+   au niveau Local.
+-> Algorithmes de Traitements optimisés en assembleur AMD64 pour les Trappes/Appels Système de base de la Librairie C standard (adaptée/crée?) , et les calculs Mathématiques Arithmétiques , Vectoriels ou Matriciels 
+   Ultra-Rapides (Instructions SSE/SIMD etc.).
+-> Intégration d'une Librairie C Standard (Support standard C11?) et (Adaptation/Création?) du Compilateur associé pour la Couche Applicative Supérieure.
+-> Système de Différentiel Fichier pour suivre la pile des évolutions (liste instructions diff/étapes/contexte initial) et gérer les Versions/Instantanés intermédiaires sur certaines données.
+-> Interface Standard de Gestion de Format de Fichier? (Lecture / Ecriture / Modèle de Format / Matrice d'Entrée /  Matrice de Sortie)
+-> Console Framebuffer.
+-> Système de MAJ logicielles?(Via un Système d'"Instantanés Différentiels"?).
+-> Support Natif d'une Librairie Graphique 3D accélérée OpenSource (WebGl,OpenGL,OpenCL?).
+-> Intégration Native d'un Système de Base De Données SQL-Compliant.
+-> Adaptation d'un Moteur Javascript 2.0 (V8). (Userspace)
+-> Adaptation d'un Browser Système HTTP/(X)(HT)ML/CSS (WebKit) (Userspace)
+
+
+
+
+Formats de fichier supportés: 
+
+-> GUI : Formats HTML,XHTML,XML,CSS,JSON,JS,TXT. (Parsing)
+-> Compression : Formats standards (ZIP/RAR/TAR/GZ/Bz2) (compression fichier)+ Algorithme "Kernel-sided" à pondération de contexte PAQ (compression flux)
+-> Gestion formats graphiques JPEG,BMP,PNG,TGA,SVG,PDF. (some Decode)
+-> Gestion formats audio WAV,OGG,MP3,MIDI. (some Decode)
+-> Gestion formats vidéo MPEG4,AVI,MPEG2,DivX,x264. (Decode)
+-> Gestion format Base De Données: Scripts SQL
+-> Programmation Assembleur / C / Javascript
+
+
+
+
+
+Interface Graphique Utilisateur / Environnement Intégré de Développement / Espace utilisateur:
+
+-> GUI Applicative Utilisateur basée sur un Modèle Web et requêtes HTTP: pas de Gestionnaire de Fenêtre mais un "System Browser" Multi Bureaux parsant les fichiers CSS / le code HTML/Javascript / Images créant l'Aspect et le 
+   Fonctionnement d'Applications sous un format Web Local utilisant l'Interface Graphique locale ("Server X" sous forme de serveur Web HTTP en Local ou en Distant). 
+   Système de Données Applicatives en Mode "Base relationelle de données SQL".
+   (Définitions de notions supplémentaire du Contexte Applicatif, root dir ou main() pour appli javascript?, architecture d'une "Application Standard"? etc...)
+-> Serveur Web Kernel-side Javascript Node.js avec syscalls accessible par librarie C gérant l'aspect traitement du code.
+-> Implémentation personnalisée Node.js / V8 / Webkit 
+-> Application HTTPBrowser
+-> Application GraphicalSystemIDE présentant 3 aspects :  Graphes fonctionnels ( "Concepts" + liens d'entrées / sorties) , Interfaces Graphique d'Entrée / Sortie liées au graphe fonctionnel et Listing des Traitements.
+-> Application Web Spécifique de Connexion Utilisateur (Equivalent XDM)
+-> Application Desktop
+-> Application Console
+-> Application RelinkStreamPanel
+-> Application FileManager
+-> Application FileViewer
+-> Application UserManagement
+-> Application NetworkManagement
+
+
+
+
+Outils de développement / Doc / Analyse
+
+-> Création d'un Compilateur ASM X86-64 AMD-compliant sous forme d'éditeur Texte Web avec Coloration Syntaxique, Auto-Complétion et Librairie organisée logiquement de manière explicative pour les différentes Instructions.
+-> Création d'un outil de Simulation Graphique d'Exécution Processeur avec Représentation Graphique de l'Exécution d'un listing fourni et Registres / Pile / Mémoire et de leurs valeurs respectives en mode Pas à Pas.
+-> Créer le Modèle Relationnel Graphique hiérarchisant les dépendances des "Concepts" Matrix0s.
+-> Créer la Représentation Graphique du Kernel, de ses ensembles de domaines de Routines et Interfaces d'entrée/Sortie par Thème Technique.
+
+
+
